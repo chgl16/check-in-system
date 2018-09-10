@@ -8,5 +8,5 @@
 
 注意：回调函数this的使用，需要新定义变量
 
-![1.png](http://120.79.164.198/file/githubImage/1.png)
+![1.png](120.79.164.198/file/githubImage/1.png)
 ![2.png](120.79.164.198/file/githubImage/2.png)
