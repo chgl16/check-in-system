@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <!-- start coding -->
+  <view class="status">
+    <text>状态：</text>
+    <text style="color:{{color}}">{{check_status}}</text>    <!-- 同为子标签会同行显示 -->
+  </view>
+  <view class="money">总钱: {{money}}元</view>
+  <button class="check_in" bindtap="check_in">签 到</button>
+
+  <!-- check in successfully tip -->
+  <text class="success_tip">{{success_tip}}</text>
+  <view class="today_get">{{today_get}}</view>
+  <!-- have checked in tip -->
+  <text class="done_tip">{{done_tip}}</text>
+
+  <text class="new_day">{{new_day}}</text>
+  
+</view>
